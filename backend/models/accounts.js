@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize";
-import db from "../config/database";
+import db from "../config/database.js";
 
 const { DataTypes } = Sequelize;
 
-const Users = db.define('accounts', {
+const Accounts = db.define('accounts', {
     name: {
         type: DataTypes.STRING
     },
@@ -20,8 +20,8 @@ const Users = db.define('accounts', {
     freezetable: true
 });
 
-(async () => {
-    await db.sync();
-}) (0);
+// (async () => {
+//     await db.sync();
+// }) (0);
 
 export default Accounts;
