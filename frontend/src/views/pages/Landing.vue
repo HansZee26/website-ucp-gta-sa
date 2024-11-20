@@ -1,4 +1,5 @@
 <script setup>
+import FloatingConfigurator from '@/components/FloatingConfigurator.vue';
 function smoothScroll(id) {
     document.body.click();
     document.querySelector(id).scrollIntoView({
@@ -29,7 +30,7 @@ function smoothScroll(id) {
                             />
                         </g>
                     </svg>
-                    <span class="text-surface-900 dark:text-surface-0 font-medium text-2xl leading-normal mr-20">SAKAI</span>
+                    <span class="text-surface-900 dark:text-surface-0 font-medium text-2xl leading-normal mr-20">Example Roleplay</span>
                 </a>
                 <Button
                     class="lg:!hidden"
@@ -49,23 +50,18 @@ function smoothScroll(id) {
                         </li>
                         <li>
                             <a @click="smoothScroll('#features')" class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
-                                <span>Features</span>
+                                <span>Fitur</span>
                             </a>
                         </li>
                         <li>
                             <a @click="smoothScroll('#highlights')" class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
-                                <span>Highlights</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a @click="smoothScroll('#pricing')" class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
-                                <span>Pricing</span>
+                                <span>About</span>
                             </a>
                         </li>
                     </ul>
                     <div class="flex border-t lg:border-t-0 border-surface py-4 lg:py-0 mt-4 lg:mt-0 gap-2">
                         <Button label="Login" text as="router-link" to="/auth/login" rounded></Button>
-                        <Button label="Register" to="/auth/login" rounded></Button>
+                        <Button label="Register" as="router-link" to="/auth/register" rounded></Button>
                     </div>
                 </div>
             </div>
@@ -76,12 +72,12 @@ function smoothScroll(id) {
                 style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, rgb(238, 239, 175) 0%, rgb(195, 227, 250) 100%); clip-path: ellipse(150% 87% at 93% 13%)"
             >
                 <div class="mx-6 md:mx-20 mt-0 md:mt-6">
-                    <h1 class="text-6xl font-bold text-gray-900 leading-tight"><span class="font-light block">Eu sem integer</span>eget magna fermentum</h1>
-                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Sed blandit libero volutpat sed cras. Fames ac turpis egestas integer. Placerat in egestas erat...</p>
+                    <h1 class="text-6xl font-bold text-gray-900 leading-tight"><span class="font-light block">Selamat datang di</span>Example Roleplay</h1>
+                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Server dengan kualitas terbaik dengan fitur fitur menarik</p>
                     <Button label="Get Started" as="router-link" to="/" rounded class="!text-xl mt-8 !px-4"></Button>
                 </div>
                 <div class="flex justify-center md:justify-end">
-                    <img src="/demo/images/landing/screen-1.png" alt="Hero Image" class="w-9/12 md:w-auto" />
+                    <img src="/demo/images/landing/gta.png" alt="Hero Image" class="w-9/12 md:w-auto" />
                 </div>
             </div>
 
@@ -273,113 +269,6 @@ function smoothScroll(id) {
                 </div>
             </div>
 
-            <div id="pricing" class="py-6 px-6 lg:px-20 my-2 md:my-6">
-                <div class="text-center mb-6">
-                    <div class="text-surface-900 dark:text-surface-0 font-normal mb-2 text-4xl">Matchless Pricing</div>
-                    <span class="text-muted-color text-2xl">Amet consectetur adipiscing elit...</span>
-                </div>
-
-                <div class="grid grid-cols-12 gap-4 justify-between mt-20 md:mt-0">
-                    <div class="col-span-12 lg:col-span-4 p-0 md:p-4">
-                        <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
-                            <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Free</div>
-                            <img src="/demo/images/landing/free.svg" class="w-10/12 mx-auto" alt="free" />
-                            <div class="my-8 flex flex-col items-center gap-4">
-                                <div class="flex items-center">
-                                    <span class="text-5xl font-bold mr-2 text-surface-900 dark:text-surface-0">$0</span>
-                                    <span class="text-surface-600 dark:text-surface-200">per month</span>
-                                </div>
-                                <Button label="Get Started" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white"></Button>
-                            </div>
-                            <Divider class="w-full bg-surface-200"></Divider>
-                            <ul class="my-8 list-none p-0 flex text-surface-900 dark:text-surface-0 flex-col px-8">
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Responsive Layout</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Unlimited Push Messages</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">50 Support Ticket</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Free Shipping</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12 lg:col-span-4 p-0 md:p-4 mt-6 md:mt-0">
-                        <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
-                            <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Startup</div>
-                            <img src="/demo/images/landing/startup.svg" class="w-10/12 mx-auto" alt="startup" />
-                            <div class="my-8 flex flex-col items-center gap-4">
-                                <div class="flex items-center">
-                                    <span class="text-5xl font-bold mr-2 text-surface-900 dark:text-surface-0">$1</span>
-                                    <span class="text-surface-600 dark:text-surface-200">per month</span>
-                                </div>
-                                <Button label="Get Started" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white"></Button>
-                            </div>
-                            <Divider class="w-full bg-surface-200"></Divider>
-                            <ul class="my-8 list-none p-0 flex text-surface-900 dark:text-surface-0 flex-col px-8">
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Responsive Layout</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Unlimited Push Messages</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">50 Support Ticket</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Free Shipping</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12 lg:col-span-4 p-0 md:p-4 mt-6 md:mt-0">
-                        <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
-                            <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Enterprise</div>
-                            <img src="/demo/images/landing/enterprise.svg" class="w-10/12 mx-auto" alt="enterprise" />
-                            <div class="my-8 flex flex-col items-center gap-4">
-                                <div class="flex items-center">
-                                    <span class="text-5xl font-bold mr-2 text-surface-900 dark:text-surface-0">$5</span>
-                                    <span class="text-surface-600 dark:text-surface-200">per month</span>
-                                </div>
-                                <Button label="Get Started" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white"></Button>
-                            </div>
-                            <Divider class="w-full bg-surface-200"></Divider>
-                            <ul class="my-8 list-none p-0 flex text-surface-900 dark:text-surface-0 flex-col px-8">
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Responsive Layout</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Unlimited Push Messages</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">50 Support Ticket</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Free Shipping</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="py-6 px-6 mx-0 mt-20 lg:mx-20">
                 <div class="grid grid-cols-12 gap-4">
@@ -402,7 +291,7 @@ function smoothScroll(id) {
                                     />
                                 </g>
                             </svg>
-                            <h4 class="font-medium text-3xl text-surface-900 dark:text-surface-0">SAKAI</h4>
+                            <h4 class="font-medium text-3xl text-surface-900 dark:text-surface-0">Example Roleplay</h4>
                         </a>
                     </div>
 
