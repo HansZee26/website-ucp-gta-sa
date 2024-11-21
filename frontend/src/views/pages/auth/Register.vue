@@ -24,7 +24,7 @@ const register = async () => {
     }
 
     try {
-        const response = await axios.post('http://localhost:5000/register', {
+        const response = await axios.post(import.meta.env.VITE_ENDPOINT_REGISTER, {
             name: name.value,
             email: email.value,
             password: password.value,

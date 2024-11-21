@@ -20,7 +20,10 @@ const app = express();
 })();
 
 // Middleware
-app.use(cors({ credentials: true, origin: 'http://localhost:5173' }));
+app.use(cors({
+    credentials: true,               // Izinkan cookie/credentials
+    origin: process.env.FRONTEND_HOST // Izinkan hanya frontend tertentu
+}));
 app.use(cookieParser());
 app.use(express.json());
 

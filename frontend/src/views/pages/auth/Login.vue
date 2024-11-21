@@ -14,7 +14,7 @@ const login = async () => {
     isLoading.value = true; // Set loading state
 
     try {
-        const response = await axios.post('http://localhost:5000/login', {
+        const response = await axios.post(import.meta.env.VITE_ENDPOINT_LOGIN, {
             email: email.value,
             password: password.value,
         });
