@@ -3,6 +3,7 @@ Website ucp samp
 fitur :
 - Login
 - register
+- MySQL
 - Keamanan BCRYPT
 - Backend dan Frontend terpisah
 - Backend Express.js
