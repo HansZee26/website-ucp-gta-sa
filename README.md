@@ -7,7 +7,8 @@ fitur :
 - Backend dan Frontend terpisah
 - Backend Express.js
 - Frontend Vite Vue3
-CATATAN :
+
+*CATATAN* :
 Website ini belum sepenuhnya sempurna. sebaiknya menambahkan fitur baru di website ini sebelum digunakan.
 
 
