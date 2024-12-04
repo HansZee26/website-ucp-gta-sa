@@ -1,4 +1,14 @@
-Website Nightly build (Update Setiap malam) 
+Website ucp samp
+
+fitur :
+- Login
+- register
+- Keamanan BCRYPT
+- Backend dan Frontend terpisah
+- Backend Express.js
+- Frontend Vite Vue3
+CATATAN :
+Website ini belum sepenuhnya sempurna. sebaiknya menambahkan fitur baru di website ini sebelum digunakan.
 
 
 Backend
