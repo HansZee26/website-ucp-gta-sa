@@ -1,6 +1,6 @@
 import AppLayout from '@/layout/AppLayout.vue';
-import { createRouter, createWebHistory } from 'vue-router';
-
+import { createRouter, createWebHistory, useRouter } from 'vue-router';
+import { isAuthenticated, refreshToken } from '@/service/AuthServices';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -42,6 +42,11 @@ const router = createRouter({
             component: () => import('@/views/pages/auth/Register.vue')
         },
         {
+            path: '/auth/logout',
+            name: 'logout',
+            component: () => import('@/views/pages/auth/Logout.vue')
+        },
+        {
             path: '/auth/access',
             name: 'accessDenied',
             component: () => import('@/views/pages/auth/Access.vue')
@@ -57,6 +62,21 @@ const router = createRouter({
             component: () => import('@/views/pages/character/CharacterMenu.vue')
         }
     ]
+});
+
+router.beforeEach((to, from, next) => {
+    const requiresAuth = !['login', 'register', 'landing', 'accessDenied', 'error', 'notfound'].includes(to.name);
+    
+    if (requiresAuth && !isAuthenticated()) {
+        // Jika pengguna mencoba mengakses halaman yang memerlukan autentikasi tapi belum login
+        next({ name: 'landing' });
+    } else if (to.name === 'login' && isAuthenticated()) {
+        // Jika pengguna sudah login dan mencoba mengakses halaman login
+        next({ name: 'dashboard' });
+    } else {
+        // Lanjutkan ke rute yang diminta
+        next();
+    }
 });
 
 export default router;

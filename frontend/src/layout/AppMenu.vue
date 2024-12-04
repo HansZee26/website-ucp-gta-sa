@@ -13,7 +13,7 @@ const model = ref([
             { label: 'Character', icon: 'pi pi-fw pi-id-card', to: '/character/CharacterMenu' },
             { label: 'Donation', icon: 'pi pi-fw pi-check-square', to: '/donation' },
             { label: 'Pengaturan', icon: 'pi pi-fw pi-check-square', to: '/settings' },
-            { label: 'Keluar', icon: 'pi pi-fw pi-check-square', to: '/Logout' },
+            { label: 'Keluar', icon: 'pi pi-fw pi-check-square', to: '/auth/Logout' },
         ]
     }
 ]);

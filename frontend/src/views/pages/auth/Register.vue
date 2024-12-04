@@ -68,7 +68,7 @@ const register = async () => {
                         <div
                             class="text-surface-900 dark:text-surface-0 text-3xl font-medium mb-4"
                         >
-                            Welcome to PrimeLand!
+                            Welcome to Example Roleplay!
                         </div>
                         <span class="text-muted-color font-medium">Create an account to continue</span>
                     </div>
